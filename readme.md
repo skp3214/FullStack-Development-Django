@@ -8,12 +8,12 @@
 - Django is popular because of its ease of scalability.
 - Django is a `Full-Stack` framework, but developers can use it to create `backend` systems and connect them with any frontend framework like `React`, `Angular`, `Vue`, etc., through `API`.
   
-  ![alt text](image.png)
+  ![alt text](/assets/image.png)
 
 ## Django Project Setup In VSCode
 1. **Python Interpreter**: First, you need a Python interpreter. Select it from the `Command Palette` in VSCode.
   
-  ![alt text](image-1.png)
+  ![alt text](/assets/image-1.png)
 
 2. **Create a Virtual Environment**:
    - Use the following command:
@@ -46,7 +46,7 @@
 - An `App` is a sub-module of a project.
 - A `Project` can have multiple `Apps`.
   
-  ![alt text](image-3.png)
+  ![alt text](/assets/image-3.png)
 
 - A Django `Project` is a Python package that includes the configuration for the database, various sub-modules known as `Apps`, and other settings specific to Django.
 
@@ -75,7 +75,7 @@ myproject/
         wsgi.py
         asgi.py
 ```
-![alt text](image-4.png)
+![alt text](/assets/image-4.png)
 
 ### 3. Navigate to Your Project Directory
 Change into the project directory:
@@ -101,7 +101,7 @@ myapp/
     migrations/
         __init__.py
 ```
-![alt text](image-5.png)
+![alt text](/assets/image-5.png)
 
 ### 5. Register the App in the Project
 To make Django recognize the app, you need to add it to the `INSTALLED_APPS` list in your project's `settings.py` file.
@@ -113,7 +113,7 @@ INSTALLED_APPS = [
     'myapp',
 ]
 ```
-![alt text](image-6.png)
+![alt text](/assets/image-6.png)
 
 ### 6. Run Migrations
 Django manages the databases operations with the ORM techniques.
@@ -165,7 +165,7 @@ After defining your models, you need to create and apply migrations to generate 
    python manage.py migrate
    ```
 The above two commands should be run whenever a new model is created or any change is done in existing model.
-![alt text](image-9.png)
+![alt text](/assets/image-9.png)
 #### Using the ORM
 
 Once the migrations are applied, you can use the ORM to create, retrieve, update, and delete records in the database.
@@ -203,7 +203,7 @@ Once the migrations are applied, you can use the ORM to create, retrieve, update
    ```sh 
    exit() 
    ``` 
-![alt text](image-8.png)
+![alt text](/assets/image-8.png)
 
 ### 7. Create a View
 Define a simple view in `myapp/views.py`. For example:
@@ -244,10 +244,12 @@ python manage.py runserver
 
 Open a web browser and go to `http://127.0.0.1:8000/`. You should see the message "Hello, world! This is my home page."
 
-![alt text](image-7.png)
+![alt text](/assets/image-7.png)
 
 ## MVT Architecture
 The MVT (Model-View-Template) architecture is the design pattern used by Django to build web applications. It is a variation of the MVC (Model-View-Controller) pattern tailored to suit the needs of web development with Django. Here’s an overview of each component in the MVT architecture:
+
+![alt text](/assets/image-11.png)
 
 ### MVT Components
 
@@ -338,7 +340,7 @@ The MVT (Model-View-Template) architecture is the design pattern used by Django 
 5. **Response**:
    - The rendered HTML is sent back to the user’s browser as a response, which displays the data in a web page.
   
-  ![alt text](image-10.png)
+  ![alt text](/assets/image-10.png)
 
 ### Summary
 
