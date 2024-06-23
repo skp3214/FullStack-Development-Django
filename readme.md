@@ -8,7 +8,7 @@
 - Django is popular because of its ease of scalability.
 - Django is a `Full-Stack` framework, but developers can use it to create `backend` systems and connect them with any frontend framework like `React`, `Angular`, `Vue`, etc., through `API`.
   
-  ![alt text](/assets/image.png)
+  ![alt text](/assets/image-2.png)
 
 ## Django Project Setup In VSCode
 1. **Python Interpreter**: First, you need a Python interpreter. Select it from the `Command Palette` in VSCode.
