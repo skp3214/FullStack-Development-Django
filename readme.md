@@ -350,3 +350,4 @@ The MVT architecture in Django allows for a clear separation of concerns:
 - **Template**: Defines the presentation and how data is displayed to the user.
 
 This structure helps in organizing code, making it more maintainable and scalable.
+
