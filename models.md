@@ -617,7 +617,7 @@ This example shows how to create a `ModelForm` in Django, handle form submission
   ```sh
   pip3 install mysqlclient
   ```
- 
+  Change the config in databases in `settings.py`
   ```python
   DATABASES = {
     'default': {   
@@ -633,4 +633,6 @@ This example shows how to create a `ModelForm` in Django, handle form submission
      }  
   }
   ```
+
+  
   
