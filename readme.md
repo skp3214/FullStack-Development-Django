@@ -4,6 +4,7 @@
 
 ## Django
 - Django is an open-source web development framework written in Python.
+- Django follows MVT([Model](/models.md)-[View](/views.md)-[Templates](/templates.md)) pattern
 - Django provides features such as `Templates`, `Libraries`, and `APIs`.
 - Django is popular because of its ease of scalability.
 - Django is a `Full-Stack` framework, but developers can use it to create `backend` systems and connect them with any frontend framework like `React`, `Angular`, `Vue`, etc., through `API`.
