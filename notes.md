@@ -1,0 +1,21 @@
+## Regex Pattern
+
+- `\d`: for digit
+- `\D`: for non-digit
+- `\w`: for word
+- `\W`: for non-word
+- `\s`: for whitespace
+- `\S`: for non-whitespace
+- `.`: for any character except newline
+- `^`: for start of string
+- `$`: for end of string
+- `[]`: for a set of characters
+- `[^]`: for a set of characters except the ones in the set
+- `|`: for or
+- `()`: for grouping
+- `*`: for zero or more
+- `+`: for one or more
+- `?`: for zero or one
+- `{n}`: for exactly n
+- `{n,}`: for n or more
+- `{n,m}`: for between n and m
