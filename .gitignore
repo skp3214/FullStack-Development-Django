@@ -48,9 +48,9 @@ ENV/
 env/
 .venv/
 .env/
+myenv/
 env.bak/
 venv.bak/
-
 # If you are using pipenv:
 Pipfile.lock
 
