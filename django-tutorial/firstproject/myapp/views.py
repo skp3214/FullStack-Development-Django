@@ -72,3 +72,19 @@ def validateOp(op):
         return True
     else:
         return False
+    
+def usernameFun(request,username):
+    
+    return HttpResponse(f"The username is {username}")
+
+def userId(request,userid):
+    
+    return HttpResponse(f"The UserId is {userid}")
+
+def moreParam(request,studentname,studentid):
+    
+    return HttpResponse(f"The Student Name is {studentname} and his id is {studentid}")
+
+def monthYear(reqeust,month,year):
+    
+    return HttpResponse(f"Month is {month} and year is {year}")
