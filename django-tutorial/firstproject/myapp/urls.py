@@ -14,4 +14,5 @@ urlpatterns = [
     re_path(r'student/(?P<studentname>\w+)/(?P<studentid>\d{3})/$',views.moreParam),
     re_path(r'date/(?P<month>\d{3,4})/(?P<year>[0-9]*)',views.monthYear),
     
+    re_path(r'empdata/(?P<empname>[a-z]*)/(?P<empsal>\w*)',views.errorHandlingEmpSal)    
 ]

@@ -88,3 +88,14 @@ def moreParam(request,studentname,studentid):
 def monthYear(reqeust,month,year):
     
     return HttpResponse(f"Month is {month} and year is {year}")
+
+def errorHandlingEmpSal(request,empname,empsal):
+    
+    if not empsal and not empname:
+        return HttpResponse("please enter both value",status=404)
+    elif not empsal:
+        return HttpResponse("Please enter salary",status=404)
+    else:
+        return HttpResponse(f"The empname is {empname} and emp sal is {empsal}")
+    
+        
