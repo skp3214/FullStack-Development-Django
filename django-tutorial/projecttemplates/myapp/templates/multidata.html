@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Multi Data Dictionary</h1>
+    <table border="1px">
+        <tr>
+        <th>Name</th>
+        <th>Marks</th>
+        <th>Age</th>
+        </tr>
+        {% for det in details %}
+        <tr>
+            <td>{{det.name}}</td>
+            <td>{{det.marks}}</td>
+            <td>{{det.age}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>
