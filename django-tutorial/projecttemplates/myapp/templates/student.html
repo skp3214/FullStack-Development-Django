@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Passed Student Information</h1>
+    <table border="1px">
+      <th>Name</th>
+      <th>Marks</th>
+      <th>Age</th>
+
+      {% for detail in complete_details %}
+        {% if detail.marks > 40 %}
+          <tr>
+            <td>{{ detail.name }}</td>
+            <td>{{ detail.marks }}</td>
+            <td>{{ detail.age }}</td>
+          </tr>
+        {% endif %}
+      {% endfor %}
+    </table>
+    <br />
+    <table border="1px">
+      <th>Name</th>
+      <th>Marks</th>
+      <th>Age</th>
+
+      {% for detail in complete_details %}
+        {% if detail.status == 'pass' %}
+          <tr style="background-color: red;">
+            <td>{{ detail.name }}</td>
+            <td>{{ detail.marks }}</td>
+            <td>{{ detail.age }}</td>
+          </tr>
+        {% else %}
+          <tr style="background-color: green;">
+            <td>{{ detail.name }}</td>
+            <td>{{ detail.marks }}</td>
+            <td>{{ detail.age }}</td>
+          </tr>
+        {% endif %}
+      {% endfor %}
+    </table>
+  </body>
+</html>

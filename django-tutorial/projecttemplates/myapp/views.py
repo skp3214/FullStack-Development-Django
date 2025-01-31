@@ -20,3 +20,35 @@ def classtask(request):
         {'name':'saif','marks':65,'age':25},
     ]
     return render(request,'multidata.html',{'details':details})
+
+def studentData(request):
+    details = {
+    'complete_details':[
+    {'name':'Ashish','marks':30,'age':20,'status':'fail'},
+    {'name':'Manoj','marks':78,'age':19,'status':'pass'},
+    {'name':'Aditi','marks':67,'age':21,'status':'pass'},
+    {'name':'Ujjawal','marks':89,'age':22,'status':'pass'},
+    {'name':'Raja','marks':32,'age':21,'status':'fail'},
+    ]
+    }
+    return render(request,'student.html',details)
+
+def linkTest(request):
+    
+    return render(request,'linktest.html')
+
+def foodDetails(request, itemname):
+    foodmenu = [
+        {'itemname': 'biryani', 'price': 100, 'GST': 12},
+        {'itemname': 'juice', 'price': 100, 'GST': 18},
+        {'itemname': 'coffee', 'price': 50, 'GST': 5},
+        {'itemname': 'tea', 'price': 150, 'GST': 10},
+    ]
+    data = {}
+    for item in foodmenu:
+        if itemname == item['itemname']:
+            data = item
+            break
+    
+    return render(request, 'fooditem.html', {'data': data})
+    
