@@ -7,6 +7,7 @@ urlpatterns = [
     path('multidata/',views.classtask),
     path('student/',views.studentData,name='student_details'),
     path('test/',views.linkTest),
-    path('foodmenu/<str:itemname>',views.foodDetails)
+    path('foodmenu/<str:itemname>',views.foodDetails,name='fooddetails'),
+    path('foodmenu/',views.foodMenuList)
 ]
 

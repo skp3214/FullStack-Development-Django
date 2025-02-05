@@ -52,3 +52,13 @@ def foodDetails(request, itemname):
     
     return render(request, 'fooditem.html', {'data': foodmenu,'itemname':itemname})
     
+    
+def foodMenuList(request):
+    foodmenu = [
+        {'itemname': 'biryani', 'price': 100, 'GST': 12,'size':'large'},
+        {'itemname': 'juice', 'price': 100, 'GST': 18,'size':'small'},
+        {'itemname': 'coffee', 'price': 50, 'GST': 5,'size':'medium'},
+        {'itemname': 'tea', 'price': 150, 'GST': 10,'size':'large'},
+    ]
+    
+    return render(request,'foodlist.html',{'fooditem':foodmenu})
