@@ -1,1 +1,18 @@
-<h1>{{data.itemname}}</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for item in data %}
+      {% if itemname == item.itemname %}
+      <h1>Itemname: {{item.itemname}}</h1>
+      <h1>Price: {{item.price}}</h1>
+      <h1>GST: {{item.GST}}</h1>
+      <h1>Item: {{item.size}}</h1>
+      {% endif %}
+    {% endfor %}
+</body>
+</html>

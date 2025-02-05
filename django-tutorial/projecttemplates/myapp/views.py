@@ -39,10 +39,10 @@ def linkTest(request):
 
 def foodDetails(request, itemname):
     foodmenu = [
-        {'itemname': 'biryani', 'price': 100, 'GST': 12},
-        {'itemname': 'juice', 'price': 100, 'GST': 18},
-        {'itemname': 'coffee', 'price': 50, 'GST': 5},
-        {'itemname': 'tea', 'price': 150, 'GST': 10},
+        {'itemname': 'biryani', 'price': 100, 'GST': 12,'size':'large'},
+        {'itemname': 'juice', 'price': 100, 'GST': 18,'size':'small'},
+        {'itemname': 'coffee', 'price': 50, 'GST': 5,'size':'medium'},
+        {'itemname': 'tea', 'price': 150, 'GST': 10,'size':'large'},
     ]
     data = {}
     for item in foodmenu:
@@ -50,5 +50,5 @@ def foodDetails(request, itemname):
             data = item
             break
     
-    return render(request, 'fooditem.html', {'data': data})
+    return render(request, 'fooditem.html', {'data': foodmenu,'itemname':itemname})
     
