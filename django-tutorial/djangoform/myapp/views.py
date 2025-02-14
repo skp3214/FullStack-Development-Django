@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.middleware.csrf import get_token
+from django.shortcuts import redirect, render
 
 
 def form(request):
@@ -42,3 +43,23 @@ def formAdd(request):
         else:
             return HttpResponse('Please enter valid numbers')
 
+def form1(request):
+    csrf_token=get_token(request)
+    if request.method=='GET':
+        html_form=f'''
+        <form  method="POST">
+        <input type="hidden" name="csrfmiddlewaretoken" value="{csrf_token}">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="email">Email:</label><br>
+        <input type="text" id="email" name="email"><br>
+        <input type="submit" value="Submit">
+        '''
+        return HttpResponse(html_form)
+    elif request.method=='POST':
+        name=request.POST['name']
+        email=request.POST['email']
+        return redirect('success')
+    
+def success(request):
+    return render(request,'success.html')
