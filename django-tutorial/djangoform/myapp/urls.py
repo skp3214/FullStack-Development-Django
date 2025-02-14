@@ -5,5 +5,6 @@ urlpatterns = [
     path('form/', views.form, name='form'),
     path('formadd/', views.formAdd, name='formadd'),
     path('form1/',views.form1),
-    path('success/',views.success,name='success')
+    path('success/',views.success,name='success'),
+    path('htmlform/',views.htmlForm)
 ]

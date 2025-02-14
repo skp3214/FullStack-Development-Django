@@ -63,3 +63,13 @@ def form1(request):
     
 def success(request):
     return render(request,'success.html')
+
+
+def htmlForm(request):
+    if request.method=='POST':
+        name=request.POST['name']
+        email=request.POST['email']
+        password=request.POST['password']
+        if name and email and password:
+            return render(request,'htmlform.html',{'name':name,'email':email,'password':password})
+    return render(request,'htmlform.html')
