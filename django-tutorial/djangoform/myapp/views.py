@@ -73,3 +73,23 @@ def htmlForm(request):
         if name and email and password:
             return render(request,'htmlform.html',{'name':name,'email':email,'password':password})
     return render(request,'htmlform.html')
+
+def validateForm(request):
+    if request.method=='POST':
+        name=request.POST['name']
+        email=request.POST['email']
+        password=request.POST['password']
+        nameError=None
+        emailError=None
+        passwordError=None
+        if not name:
+            nameError='Name is required'
+        if not email:
+            emailError='Email is required'
+        if not password:
+            passwordError='Password is required'
+        if nameError or emailError or passwordError:
+            return render(request,'validateform.html',{'name':name,'email':email,'password':password,'nameError':nameError,'emailError':emailError,'passwordError':passwordError})
+        else:
+            return render(request,'validateform.html',{'name':name,'email':email,'password':password})
+    return render(request,'validateform.html')

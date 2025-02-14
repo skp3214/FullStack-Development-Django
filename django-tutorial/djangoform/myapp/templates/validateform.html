@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" name="name" id="name">
+        {% if nameError %}
+            <p style="color: red;">{{ nameError }}</p>
+        {% endif %}
+        <input type="text" name="email" id="email">
+        {% if emailError %}
+            <p style="color: red;">{{ emailError }}</p>
+        {% endif %}
+        <input type="text" name="password" id="password">
+        {% if passwordError %}
+            <p style="color: red;">{{ passwordError }}</p>
+        {% endif %}
+        <input type="submit" value="Submit">
+    </form>
+    <h1>Submitted Details: </h1>
+    <h2>{{ name }}</h2>
+    <h2>{{ email }}</h2>
+    <h2>{{ password }}</h2>
+</body>
+</html>
