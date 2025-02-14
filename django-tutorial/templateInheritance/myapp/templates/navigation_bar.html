@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+
+        /* Navbar Styles */
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+        }
+
+        li {
+            padding: 15px 20px;
+        }
+
+        li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 14px 20px;
+            display: block;
+            transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        li a:hover {
+            background-color: #ff5733;
+            color: white;
+            border-radius: 5px;
+        }
+
+        /* Responsive Navbar */
+        @media (max-width: 600px) {
+            ul {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            li {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Food</a></li>
+    </ul>
+</body>
+
+</html>
