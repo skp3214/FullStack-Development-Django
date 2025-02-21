@@ -115,3 +115,10 @@ def validateFormPRG(request):
 
 def validationWithDetails(request,name,email,password):
     return render(request,'validateformprg.html',{'name':name,'email':email,'password':password})
+
+## DJNAGO FORMS
+from .forms import UserForm
+
+def userForm(request):
+    form=UserForm()
+    return render(request,'userform.html',{'form':form})
