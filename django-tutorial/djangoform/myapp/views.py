@@ -86,8 +86,8 @@ def validateForm(request):
             nameError='Name is required'
         if not email:
             emailError='Email is required'
-        if not password:
-            passwordError='Password is required'
+        if len(password)<6:
+            passwordError='Password length must be 6 characters'
         if nameError or emailError or passwordError:
             return render(request,'validateform.html',{'name':name,'email':email,'password':password,'nameError':nameError,'emailError':emailError,'passwordError':passwordError})
         else:

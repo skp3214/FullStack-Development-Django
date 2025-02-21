@@ -1,30 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <form method="post">
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+      div {
+        margin-top: 50px;
+        margin-left: 50px;
+      }
+      input {
+        margin-bottom: 10px;
+        width: 400px;
+        height: 30px;
+       
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <form method="post">
         {% csrf_token %}
-        <input type="text" name="name" id="name">
+        <input type="text" name="name" id="name" placeholder="Enter Name" /> <br />
         {% if nameError %}
-            <p style="color: red;">{{ nameError }}</p>
+          <p style="color: red;">{{ nameError }}</p>
         {% endif %}
-        <input type="text" name="email" id="email">
+        <input type="text" name="email" id="email" placeholder="Enter Email" /> <br />
         {% if emailError %}
-            <p style="color: red;">{{ emailError }}</p>
+          <p style="color: red;">{{ emailError }}</p>
         {% endif %}
-        <input type="text" name="password" id="password">
+        <input type="text" name="password" id="password" placeholder="Enter Password" /> <br />
         {% if passwordError %}
-            <p style="color: red;">{{ passwordError }}</p>
+          <p style="color: red;">{{ passwordError }}</p>
         {% endif %}
-        <input type="submit" value="Submit">
-    </form>
-    <h1>Submitted Details: </h1>
-    <h2>{{ name }}</h2>
-    <h2>{{ email }}</h2>
-    <h2>{{ password }}</h2>
-</body>
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+    <div>
+      <h1>Submitted Details:</h1>
+      <h4>Name: {{ name }}</h4>
+      <h4>Email: {{ email }}</h4>
+      <h4>Password: {{ password }}</h4>
+    </div>
+  </body>
 </html>
