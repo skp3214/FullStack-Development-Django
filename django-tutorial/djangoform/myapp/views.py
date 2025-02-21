@@ -93,3 +93,25 @@ def validateForm(request):
         else:
             return render(request,'validateform.html',{'name':name,'email':email,'password':password})
     return render(request,'validateform.html')
+def validateFormPRG(request):
+    if request.method=='POST':
+        name=request.POST['name']
+        email=request.POST['email']
+        password=request.POST['password']
+        nameError=None
+        emailError=None
+        passwordError=None
+        if not name:
+            nameError='Name is required'
+        if not email:
+            emailError='Email is required'
+        if len(password)<6:
+            passwordError='Password length must be 6 characters'
+        if nameError or emailError or passwordError:
+            return render(request,'validateform.html',{'name':name,'email':email,'password':password,'nameError':nameError,'emailError':emailError,'passwordError':passwordError})
+        else:
+            return redirect('validation_with_details',name=name,email=email,password=password)
+    return render(request,'validateform.html')
+
+def validationWithDetails(request,name,email,password):
+    return render(request,'validateformprg.html',{'name':name,'email':email,'password':password})
