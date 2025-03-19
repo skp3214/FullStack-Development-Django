@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+         {{ form.as_p }}
+        <input type="submit" value="Sign Up">
+    </form>
+    {% if account_created %}
+    <h1>Account created successful</h1>
+    {% endif %}
+
+    <div>
+        <h2>All Users</h2>
+        {% if user %}
+            {% for user in users %}
+            <p>{{ user.email }}</p>
+            <a href="{% url 'delete_user' user.id %}">delete</a>
+            <a href="{% url 'update_user' user.id %}">update</a>
+            {% endfor %}
+        {% endif %}
+    </div>
+</body>
+</html>
