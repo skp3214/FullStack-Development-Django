@@ -16,3 +16,7 @@ def blogform(request):
 def bloglist(request):
     blogs=BlogPost.objects.all()
     return render(request,'allblogs.html',{'blogs':blogs})
+
+def getBlogById(request,id):
+    blog=BlogPost.objects.get(id=id)
+    return render(request,'blog.html',{'blog':blog})

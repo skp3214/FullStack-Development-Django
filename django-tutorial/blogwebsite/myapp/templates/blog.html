@@ -37,7 +37,7 @@
             display: block;
             margin: 10px 0;
             max-width: 100%;
-            height: auto;
+            height: 300px;
             border-radius: 5px;
         }
     </style>
@@ -46,11 +46,11 @@
     <div class="container">
         <h1>All Blogs</h1>
         <ul>
-            {% for blog in blogs %}
                 <li>
-                    <a href="{% url "blog" blog.id%}">{{blog.title}}</a>
+                    <h1>{{blog.title}}</h1>
+                    <h3>{{blog.body}}</h3>
+                    <img src="{{blog.thumbnail.url}}" alt="{{blog.title}}">
                 </li>
-            {% endfor %}
         </ul>
     </div>
 </body>
