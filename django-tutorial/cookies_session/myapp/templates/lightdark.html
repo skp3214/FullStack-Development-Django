@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .light {
+        background-color: white;
+        color: black;
+    }
+    .dark {
+        background-color: black;
+        color: white;
+    }
+</style>
+<body class="{{ theme }}">
+    <form method="post">
+        {% csrf_token %}
+        <label for="theme">Choose a theme:</label>
+        <select name="theme" id="theme">
+            <option value="light" >Light</option>
+            <option value="dark" >Dark</option>
+        </select>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
